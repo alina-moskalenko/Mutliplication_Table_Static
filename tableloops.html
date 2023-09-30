@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        border-collapse: collapse;
+      }
+    </style>
+    <script>
+      document.write('<table cellspacing="0" cellpadding="10" border="1">');
+      for (let rows = 0; rows < 11; rows++) {
+        document.write('<tr>');
+        for (let cols = 0; cols < 11; cols++) {
+          //writing a multi-pronged condition
+          if (rows == 0 && cols == 0) {
+            document.write('<td style=color:#FF0DCB> x </td>');
+          } else if (rows == cols) {
+            document.write('<td style=color:green>' + rows * cols + '</td>');
+          } else if (rows == 0 && cols > 0) {
+            document.write('<td style=color:blue>' + cols + '</td>');
+          } else if (cols == 0 && rows > 0) {
+            document.write('<td style=color:red>' + rows + '</td>');
+          } else if (rows > 0 && cols > 0) {
+            document.write('<td>' + rows * cols + '</td>');
+          }
+        }
+        document.write('</tr>');
+      }
+      document.write('</table>');
+    </script>
+  </head>
+  <body></body>
+</html>
